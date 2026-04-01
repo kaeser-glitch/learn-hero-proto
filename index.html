@@ -685,10 +685,6 @@
 </head>
 <body>
 
-  <!-- DEV NOTE -->
-  <div class="dev-note">
-    <strong>Dev note:</strong> Replace <code>VIDEO_ID_HERO</code> in the hero iframe with a Vimeo video ID for the background loop, and <code>VIDEO_ID_MAIN</code> in the modal iframe with the main session video ID. The <code>?background=1</code> parameter handles autoplay, mute, and loop automatically — requires <strong>Vimeo Pro or higher</strong>. The poster image fades out once Vimeo fires its <code>bufferstart</code> event. On devices that block autoplay, the poster stays visible as fallback.
-  </div>
 
   <!-- NAV -->
   <nav id="main-nav">
@@ -730,7 +726,7 @@
     <div class="hero-video-wrap">
       <iframe
         id="hero-iframe"
-        src="https://player.vimeo.com/video/VIDEO_ID_HERO?background=1&quality=1080p"
+        src="https://player.vimeo.com/video/76979871?background=1&quality=1080p"
         frameborder="0"
         allow="autoplay; fullscreen"
         allowfullscreen
@@ -956,7 +952,7 @@
       <div class="modal-video-wrap">
         <iframe
           id="modal-iframe"
-          src=""
+          src="https://player.vimeo.com/video/76979871"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen
@@ -998,7 +994,7 @@
     const closeBtn = document.getElementById('modal-close');
 
     // Replace VIDEO_ID_MAIN with your actual Vimeo video ID
-    const MAIN_VIDEO_SRC = 'https://player.vimeo.com/video/VIDEO_ID_MAIN?autoplay=1&title=0&byline=0&portrait=0';
+    const MAIN_VIDEO_SRC = 'https://player.vimeo.com/video/76979871?autoplay=1&title=0&byline=0&portrait=0';
 
     watchBtn.addEventListener('click', () => {
       modalIframe.src = MAIN_VIDEO_SRC;
